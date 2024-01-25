@@ -36,8 +36,10 @@ const Product = () => {
 
   const { error, data: products, isLoading } = useQuery({
     queryKey: ['products'], // This string array key is used for caching by react-query
+    // They key becomes an identifier for the query
+    // This key then also helps in caching
     queryFn: fetchProducts,
-    staleTime: 5000,
+    // staleTime: 5000,
   });
 
   // This states are not required in order to manage products, loading states and error states
