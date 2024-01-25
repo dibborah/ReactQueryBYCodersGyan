@@ -3,9 +3,18 @@ import { Link } from "react-router-dom";
 
 // Stale queries are refetched automatically in the background when:
 // 1. New instances of the query mount(Component is re-endered)
+// refetchOnMount
 // 2. Window is on Focus
+// refetchOnWindowFocus
 // 3. When Network Re-connects
+// refetchOnReconnect
 // 4. An re-fetched per interval is set / configured
+
+// Popular methods provided by react query to change the bydefault behaviours of fetching are:
+//1. refetchOnMount // 2. refetchOnWindowFocus // 3. refetchOnReconnect
+
+// Some other options provided by react-query are:
+// retry and retry delay(duration per retry)
 
 // Here things are getting complex
 
@@ -25,7 +34,7 @@ const fetchProducts = async () => {
 
 const Product = () => {
 
-  const {  error, data: products, isLoading } = useQuery({
+  const { error, data: products, isLoading } = useQuery({
     queryKey: ['products'], // This string array key is used for caching by react-query
     queryFn: fetchProducts,
     staleTime: 5000,

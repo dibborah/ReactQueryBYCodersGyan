@@ -9,6 +9,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 // Create a client
 // const queryClient = new QueryClient();
 
+// Setting the fetching behaviours Globally
 const queryClient = new QueryClient({
     defaultOptions:{
         queries:{
