@@ -27,3 +27,8 @@ const Product = () => {
 }
 
 export default Product;
+
+
+// useMutation: 
+// Gives us some methods like:
+// 1. mutate 2. isLoading 3. isError 4. isSuccess 5. error
